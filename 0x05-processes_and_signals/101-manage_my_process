@@ -5,12 +5,12 @@ pidFile="/var/run/my_process.pid"
 start()
 {
 	./manage_my_process &
-	echo "$$" > $pidFile
+	echo "$!" > $pidFile
 }
 
 stop()
 {
-	kill -9 "$(cat "$pidFile")" &> /dev/null
+	kill "$(cat $pidFile)"
 	rm $pidFile
 }
 
