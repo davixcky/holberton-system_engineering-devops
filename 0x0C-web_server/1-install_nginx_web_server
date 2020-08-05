@@ -2,5 +2,5 @@
 # Serve a web page using nginx
 apt install -y nginx
 service nginx start
-echo "Holberton School" > /var/www/html/index.html 
+echo "Holberton School for the win!" > /var/www/html/index.html 
 
