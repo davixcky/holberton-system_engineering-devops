@@ -15,5 +15,9 @@ NOT_FOUND="\\\terror_page 404 /404.html;\n\
         }"
 sed -i "26i $NOT_FOUND" /etc/nginx/sites-available/default
 
+PAGE_404="Ceci n'est pas une page" 
+
+echo "${PAGE_404}" > /var/www/html/404.html
+
 service nginx restart
 
