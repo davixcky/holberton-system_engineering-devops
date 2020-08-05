@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Serve a web page using nginx
 apt install -y nginx
+service nginx start
 echo "Holberton School" > /var/www/html/index.html 
 
