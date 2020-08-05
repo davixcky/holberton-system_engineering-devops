@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Serve a web page using nginx
 apt install -y nginx
+ufw allow 'Nginx HTTP'
+echo "Holberton School for the win!" > /var/www/html/index.html
 service nginx start
-echo "Holberton School for the win!" > /var/www/html/index.html 
-
