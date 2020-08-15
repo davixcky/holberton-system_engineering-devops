@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Serve a web page using nginx
+apt-get -y update
+apt-get install -y haproxy
+
+CONFIGURATION="\\\nfrontend hbtn-loadb\n\
+	bind *:80\n\
+	mode http\n\
+	option forwardfor\n\
+	default_backend servers\n\n\
+\
+backend servers\n\
+	balance roundrobin\n\
+	server 1532-web-01 34.74.57.2\n\
+	server 1532-web-02 52.90.165.93\n" 
+
+sed -i "11i $CONFIGURATION"  /etc/haproxy/haproxy.cfg 
+sudo service haproxy start
