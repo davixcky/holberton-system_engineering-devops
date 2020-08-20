@@ -7,4 +7,4 @@ ufw disable
 ufw allow http
 ufw allow ssh
 ufw allow 443
-ufw enable
+ufw --force enable
