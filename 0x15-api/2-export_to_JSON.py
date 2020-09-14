@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     url2 = 'https://jsonplaceholder.typicode.com/users/{}'.format(id_)
     response = s.get(url2)
-    name = response.json()['name']
+    name = response.json()['username']
 
     response = s.get(url)
     body = response.json()
