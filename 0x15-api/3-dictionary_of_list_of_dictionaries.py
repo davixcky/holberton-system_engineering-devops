@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" For a given employee, returns information about the TODO list progress"""
+""" Returns all employes"""
 import requests
 import json
 
