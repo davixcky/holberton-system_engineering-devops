@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Returns all employes"""
-import requests
 import json
+import requests
 
 
 if __name__ == '__main__':
