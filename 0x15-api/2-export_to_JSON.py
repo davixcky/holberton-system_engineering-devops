@@ -13,15 +13,16 @@ if __name__ == '__main__':
 
     url2 = 'https://jsonplaceholder.typicode.com/users/{}'.format(id_)
     response = s.get(url2)
-    name = response.json()['username']
+    name = response.json()
+    name = name.get('username')
 
     response = s.get(url)
     body = response.json()
 
     data = {id_: []}
     for task in body:
-        data[id_].append({"task": "{}".format(task['title']),
-                          "completed": task['completed'],
+        data[id_].append({"task": "{}".format(task.get('title')),
+                          "completed": task.get('completed'),
                           "username": "{}".format(name)})
 
     with open(id_ + '.json', 'w') as outfile:
